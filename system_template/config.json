@@ -1,0 +1,1473 @@
+{
+    "template_name": "system_template",
+    "template_view_name": "System template",
+    "description": "It is a template for the system. You must install it.",
+    "custom_tables": [
+        {
+            "table_name": "document",
+            "table_view_name": "Document",
+            "description": null,
+            "showlist_flg": "0",
+            "options": {
+                "search_enabled": "0",
+                "icon": "fa-file",
+                "color": "#999999",
+                "attachment_flg": "0",
+                "comment_flg": "0",
+                "one_record_flg": "0",
+                "all_user_accessable_flg": "1"
+            },
+            "custom_columns": [
+                {
+                    "column_name": "document_name",
+                    "column_view_name": "Document Name",
+                    "column_type": "text",
+                    "description": null,
+                    "system_flg": "1",
+                    "options": {
+                        "use_label_flg": "1",
+                        "index_enabled": "1",
+                        "freeword_search": "1"
+                    }
+                },
+                {
+                    "column_name": "file_uuid",
+                    "column_view_name": "File Uuid",
+                    "column_type": "text",
+                    "description": null,
+                    "system_flg": "1",
+                    "options": {
+                        "index_enabled": "1",
+                        "freeword_search": "1"
+                    }
+                }
+            ]
+        },
+        {
+            "table_name": "comment",
+            "table_view_name": "Cocument",
+            "description": null,
+            "showlist_flg": "0",
+            "options": {
+                "search_enabled": "0",
+                "icon": "fa-file",
+                "color": "#999999",
+                "attachment_flg": "0",
+                "comment_flg": "0",
+                "one_record_flg": "0",
+                "all_user_editable_flg": "1"
+            },
+            "custom_columns": [
+                {
+                    "column_name": "comment_detail",
+                    "column_view_name": "Cocument detail",
+                    "column_type": "textarea",
+                    "description": null,
+                    "system_flg": "1",
+                    "options": {
+                        "use_label_flg": "1",
+                        "index_enabled": "1",
+                        "freeword_search": "1"
+                    }
+                }
+            ]
+        },
+        {
+            "table_name": "base_info",
+            "table_view_name": "Base Info",
+            "description": null,
+            "options": {
+                "search_enabled": "0",
+                "icon": "fa-building",
+                "color": null,
+                "attachment_flg": "0",
+                "comment_flg": "0",
+                "one_record_flg": "1",
+                "all_user_accessable_flg": "1"
+            },
+            "custom_columns": [
+                {
+                    "column_name": "company_name",
+                    "column_view_name": "Company Name",
+                    "column_type": "text",
+                    "description": null,
+                    "options": {
+                        "required": "1",
+                        "use_label_flg": "1",
+                        "index_enabled": "1",
+                        "freeword_search": "1"
+                    }
+                },
+                {
+                    "column_name": "company_kana",
+                    "column_view_name": "Company Kana",
+                    "column_type": "text",
+                    "description": null,
+                    "options": []
+                },
+                {
+                    "column_name": "zip01",
+                    "column_view_name": "Postal Code1",
+                    "column_type": "text",
+                    "description": null,
+                    "options": []
+                },
+                {
+                    "column_name": "zip02",
+                    "column_view_name": "Postal Code2",
+                    "column_type": "text",
+                    "description": null,
+                    "options": []
+                },
+                {
+                    "column_name": "tel01",
+                    "column_view_name": "Tel1",
+                    "column_type": "text",
+                    "description": null,
+                    "options": {
+                        "placeholder": "ex:03"
+                    }
+                },
+                {
+                    "column_name": "tel02",
+                    "column_view_name": "Tel2",
+                    "column_type": "text",
+                    "description": null,
+                    "options": {
+                        "placeholder": "ex:1234"
+                    }
+                },
+                {
+                    "column_name": "tel03",
+                    "column_view_name": "Tel3",
+                    "column_type": "text",
+                    "description": null,
+                    "options": {
+                        "placeholder": "ex:5678"
+                    }
+                },
+                {
+                    "column_name": "fax01",
+                    "column_view_name": "FAX1", 
+                    "column_type": "text",
+                    "description": null,
+                    "options": {
+                        "placeholder": "ex:03"
+                    }
+                },
+                {
+                    "column_name": "fax02",
+                    "column_view_name": "FAX2",
+                    "column_type": "text",
+                    "description": null,
+                    "options": {
+                        "placeholder": "ex:1234"
+                    }
+                },
+                {
+                    "column_name": "fax03",
+                    "column_view_name": "FAX3",
+                    "column_type": "text",
+                    "description": null,
+                    "options": {
+                        "placeholder": "ex:5678"
+                    }
+                },
+                {
+                    "column_name": "pref",
+                    "column_view_name": "Prefectures",
+                    "column_type": "select_valtext",
+                    "description": null,
+                    "options": {
+                        "select_item_valtext": "01,Hokkaido\n02,Aomori\n03,Iwate\n04,Akita\n05,Akita\n06,Yamagata\n07,Fukushima\n08,Ibaraki\n09,Tochigi\n10,Gunma\n11,Saitama\n12,Chiba\n13,Tokyo\n14,Kanagawa\n15,Niigata\n16,Toyama\n17,Ishikawa\n18,Fukui\n19,Yamanashi\n20,Nagano\n21,Gifu\n22,Shizuoka\n23,Aichi\n24,Mie\n25,Shiga\n26,Kyoto\n27,Osaka\n28,Hyogo\n29,Nara\n30,Wakayama\n31,Tottori\n32,Shimane\n33,Hiroshima\n34,Yamaguchi\n36,Tokushima\n37,Kagawa\n38,Ehime\n39,Kochi\n40,Fukuoka\n41,Saga\n42,Nagasaki\n43,Kumamoto\n44,Oita\n45,Miyazaki\n46,Kagoshima\n47,Okinawa"
+                    }
+                },
+                {
+                    "column_name": "addr01",
+                    "column_view_name": "Address",
+                    "column_type": "text",
+                    "description": null,
+                    "options": []
+                },
+                {
+                    "column_name": "addr02",
+                    "column_view_name": "Address(After Building)",
+                    "column_type": "text",
+                    "description": null,
+                    "options": []
+                },
+                {
+                    "column_name": "company_logo",
+                    "column_view_name": "Company Logo",
+                    "column_type": "image",
+                    "description": null,
+                    "options": {
+                        "help": "The optimal image size is 200 x 70."
+                    }
+                },
+                {
+                    "column_name": "company_stamp",
+                    "column_view_name": "Company Stamp",
+                    "column_type": "image",
+                    "description": null,
+                    "options": {
+                        "help": "The optimal image size is 200 x 200."
+                    }
+                },
+                {
+                    "column_name": "transfer_bank_name",
+                    "column_view_name": "Bank Account-Bank Name",
+                    "column_type": "text",
+                    "description": null,
+                    "options": []
+                },
+                {
+                    "column_name": "transfer_bank_office_name",
+                    "column_view_name": "Bank Account-Office Name",
+                    "column_type": "text",
+                    "description": null,
+                    "options": []
+                },
+                {
+                    "column_name": "transfer_bank_office_no",
+                    "column_view_name": "Bank Account-Office No",
+                    "column_type": "text",
+                    "description": null,
+                    "options": []
+                },
+                {
+                    "column_name": "transfer_bank_account_type",
+                    "column_view_name": "Bank Account-Account Type",
+                    "column_type": "text",
+                    "description": null,
+                    "options": {
+                        "help": "Please enter the type of account, such as [Normal] or [Current]."
+                    }
+                },
+                {
+                    "column_name": "transfer_bank_account_no",
+                    "column_view_name": "Bank Account-Account No",
+                    "column_type": "text",
+                    "description": null,
+                    "options": []
+                },
+                {
+                    "column_name": "transfer_bank_account_name",
+                    "column_view_name": "Bank Account-Account Name",
+                    "column_type": "text",
+                    "description": null,
+                    "options": []
+                }
+            ]
+        },
+        {
+            "table_name": "user",
+            "table_view_name": "User",
+            "description": null,
+            "options": {
+                "search_enabled": "1",
+                "icon": "fa-user",
+                "color": null,
+                "one_record_flg": "0",
+                "attachment_flg": "0",
+                "comment_flg": "0",
+                "all_user_accessable_flg": "1"
+            },
+            "custom_columns": [
+                {
+                    "column_name": "user_code",
+                    "column_view_name": "User Code",
+                    "column_type": "text",
+                    "description": null,
+                    "system_flg": "1",
+                    "options": {
+                        "required": "1",
+                        "index_enabled": "1",
+                        "freeword_search": "1",
+                        "init_only": "1",
+                        "unique": "1",
+                        "available_characters": ["lower","upper","number", "dot", "hyphen_underscore"]
+                    }
+                },
+                {
+                    "column_name": "user_name",
+                    "column_view_name": "User Name",
+                    "column_type": "text",
+                    "description": null,
+                    "system_flg": "1",
+                    "options": {
+                        "required": "1",
+                        "use_label_flg": "1",
+                        "index_enabled": "1",
+                        "freeword_search": "1"
+                    }
+                },
+                {
+                    "column_name": "email",
+                    "column_view_name": "Email",
+                    "column_type": "email",
+                    "description": null,
+                    "system_flg": "1",
+                    "options": {
+                        "required": "1",
+                        "index_enabled": "1",
+                        "freeword_search": "1",
+                        "unique": "1"
+                    }
+                }
+            ]
+        },
+        {
+            "table_name": "organization",
+            "table_view_name": "Organization",
+            "description": null,
+            "options": {
+                "search_enabled": "1",
+                "icon": "fa-sitemap",
+                "color": null,
+                "one_record_flg": "0",
+                "attachment_flg": "0",
+                "comment_flg": "0",
+                "all_user_accessable_flg": "1"
+            },
+            "custom_columns": [
+                {
+                    "column_name": "organization_code",
+                    "column_view_name": "Organization Code",
+                    "column_type": "text",
+                    "description": null,
+                    "system_flg": "1",
+                    "options": {
+                        "required": "1",
+                        "index_enabled": "1",
+                        "freeword_search": "1",
+                        "unique": "1",
+                        "init_only": "1",
+                        "available_characters": ["lower","upper","number","dot","hyphen_underscore"]
+                    }
+                },
+                {
+                    "column_name": "organization_name",
+                    "column_view_name": "Organization Name",
+                    "column_type": "text",
+                    "description": null,
+                    "system_flg": "1",
+                    "options": {
+                        "required": "1",
+                        "use_label_flg": "1",
+                        "index_enabled": "1",
+                        "freeword_search": "1"
+                    }
+                },
+                {
+                    "column_name": "parent_organization",
+                    "column_view_name": "Parent Organization",
+                    "column_type": "organization",
+                    "description": null,
+                    "system_flg": "1",
+                    "options": {
+                        "index_enabled": "1",
+                        "freeword_search": "1"
+                    }
+                }
+            ]
+        },
+        {
+            "table_name": "mail_template",
+            "table_view_name": "Email template",
+            "description": "Manage the message text etc. when sending mail.",
+            "options": {
+                "search_enabled": "0",
+                "icon": "fa-bell-o",
+                "color": "#ff9932",
+                "attachment_flg": "0",
+                "comment_flg": "0",
+                "one_record_flg": "0",
+                "revision_flg": "0",
+                "all_user_accessable_flg": "1"
+            },
+            "custom_columns": [
+                {
+                    "column_name": "mail_key_name",
+                    "column_view_name": "Email key name",
+                    "column_type": "text",
+                    "system_flg": "1",
+                    "options": {
+                        "required": "1",
+                        "index_enabled": "1",
+                        "freeword_search": "1",
+                        "unique": "1",
+                        "init_only": "1",
+                        "available_characters": ["lower", "upper", "number", "hyphen_underscore"],
+                        "help": "It is a key name to uniquely identify the mail template on the system."
+                    }
+                },
+                {
+                    "column_name": "mail_view_name",
+                    "column_view_name": "Email display name",
+                    "column_type": "text",
+                    "system_flg": "1",
+                    "options": {
+                        "required": "1",
+                        "use_label_flg": "1",
+                        "index_enabled": "1",
+                        "freeword_search": "1",
+                        "help": "It is a template name displayed on the list screen."
+                    }
+                },
+                {
+                    "column_name": "mail_template_type",
+                    "column_view_name": "Template type",
+                    "description": null,
+                    "column_type": "select_valtext",
+                    "system_flg": "1",
+                    "options": {
+                        "required": "1",
+                        "index_enabled": "1",
+                        "freeword_search": "1",
+                        "select_item_valtext": "header,Header\nbody,Body\nfooter,Footer",
+                        "default": "body"
+                    }
+                },
+                {
+                    "column_name": "mail_from_view_name",
+                    "column_view_name": "Email from view name",
+                    "column_type": "text",
+                    "system_flg": "1",
+                    "options": {
+                        "help": "Please enter the display name of the sender."
+                    }
+                },
+                {
+                    "column_name": "mail_subject",
+                    "column_view_name": "Email subject",
+                    "column_type": "text",
+                    "system_flg": "1",
+                    "options": {
+                        "help": "Enter the subject of the email to be sent. You can use variables."
+                    }
+                },
+                {
+                    "column_name": "mail_body",
+                    "column_view_name": "Email body",
+                    "column_type": "textarea",
+                    "system_flg": "1",
+                    "options": {
+                        "help": "Enter the text of the email you want to send. You can use variables."
+                    }
+                },
+                {
+                    "column_name": "attachments",
+                    "column_view_name": "Attachments",
+                    "column_type": "file",
+                    "system_flg": "1",
+                    "options": {
+                        "help": "Add the file you want to attach to the email.",
+                        "multiple_enabled": "1"
+                    }
+                },
+                {
+                    "column_name": "custom_attachments",
+                    "column_view_name": "Custom Attachments",
+                    "column_type": "textarea",
+                    "system_flg": "1",
+                    "options": {
+                        "help": "Add the file column or documents you want to attach to the email."
+                    }
+                }
+            ]
+        },
+        {
+            "table_name": "mail_send_log",
+            "table_view_name": "Email transmission history",
+            "description": "Manage mail transmission history.",
+            "options": {
+                "search_enabled": "0",
+                "icon": "fa-envelope-o",
+                "color": "#ffbd3a",
+                "attachment_flg": "0",
+                "comment_flg": "0",
+                "one_record_flg": "0",
+                "revision_flg": "0"
+            },
+            "custom_columns": [
+                {
+                    "column_name": "mail_from",
+                    "column_view_name": "Email sender",
+                    "column_type": "email",
+                    "system_flg": "1",
+                    "options": {
+                        "required": "1"
+                    }
+                },
+                {
+                    "column_name": "mail_to",
+                    "column_view_name": "Email destination",
+                    "column_type": "text",
+                    "system_flg": "1",
+                    "options": {
+                        "required": "1"
+                    }
+                },
+                {
+                    "column_name": "mail_cc",
+                    "column_view_name": "Email destination(CC)",
+                    "column_type": "text",
+                    "system_flg": "1",
+                    "options": {
+                    }
+                },
+                {
+                    "column_name": "mail_bcc",
+                    "column_view_name": "Email destination(BCC)",
+                    "column_type": "text",
+                    "system_flg": "1",
+                    "options": {
+                    }
+                },
+                {
+                    "column_name": "mail_subject",
+                    "column_view_name": "Email subject",
+                    "column_type": "text",
+                    "system_flg": "1",
+                    "options": {
+                    }
+                },
+                {
+                    "column_name": "mail_body",
+                    "column_view_name": "Email body",
+                    "column_type": "textarea",
+                    "system_flg": "1",
+                    "options": {
+                    }
+                },
+                {
+                    "column_name": "user",
+                    "column_view_name": "Send target user",
+                    "column_type": "user",
+                    "system_flg": "1",
+                    "options": {
+                        "index_enabled": "1",
+                        "freeword_search": "1"
+                    }
+                },
+                {
+                    "column_name": "mail_template",
+                    "column_view_name": "Outgoing mail template",
+                    "column_type": "select_table",
+                    "system_flg": "1",
+                    "options": {
+                        "select_target_table_name": "mail_template",
+                        "index_enabled": "1",
+                        "freeword_search": "1"
+                    }
+                },
+                {
+                    "column_name": "send_datetime",
+                    "column_view_name": "Transmission date",
+                    "column_type": "datetime",
+                    "system_flg": "1",
+                    "options": {
+                        "index_enabled": "1",
+                        "freeword_search": "1"
+                    }
+                }
+            ]
+        },
+        {
+            "table_name": "information",
+            "table_view_name": "Information",
+            "description": "Information to notify the user. It can be displayed on a dashboard etc.",
+            "showlist_flg": "1",
+            "system_flg": "0",
+            "options": {
+                "search_enabled": "1",
+                "icon": "fa-exclamation",
+                "color": null,
+                "revision_flg": "0",
+                "attachment_flg": "0",
+                "comment_flg": "0",
+                "one_record_flg": "0",
+                "all_user_viewable_flg": "1",
+                "all_user_accessable_flg": "1"
+            },
+            "custom_columns": [
+                {
+                    "column_name": "title",
+                    "column_view_name": "Title",
+                    "column_type": "text",
+                    "description": null,
+                    "system_flg": "0",
+                    "options": {
+                        "required": "1",
+                        "use_label_flg": "1",
+                        "index_enabled": "1",
+                        "freeword_search": "1"
+                    }
+                },
+                {
+                    "column_name": "body",
+                    "column_view_name": "Body",
+                    "column_type": "editor",
+                    "description": null,
+                    "system_flg": "0",
+                    "options": {
+                        "string_length": "2000"
+                    }
+                },
+                {
+                    "column_name": "view_flg",
+                    "column_view_name": "Display flag",
+                    "column_type": "yesno",
+                    "description": null,
+                    "system_flg": "0",
+                    "options": {
+                        "index_enabled": "1",
+                        "freeword_search": "1",
+                        "help": "If you want to display a list, please set to YES.",
+                        "default": "1",
+                        "required": "1"
+                    }
+                },
+                {
+                    "column_name": "order",
+                    "column_view_name": "Display order",
+                    "column_type": "integer",
+                    "description": null,
+                    "system_flg": "0",
+                    "options": {
+                        "index_enabled": "1",
+                        "freeword_search": "1",
+                        "help": "Display in the list in descending order of numerical value. (In the case of the same value, the update date and time are in the order of latest)",
+                        "required": "1",
+                        "number_max": null,
+                        "number_min": "0",
+                        "updown_button": "1"
+                    }
+                },
+                {
+                    "column_name": "priority",
+                    "column_view_name": "Priority",
+                    "column_type": "select_valtext",
+                    "description": null,
+                    "options": {
+                        "default": "3",
+                        "required": "1",
+                        "select_item_valtext": "1,very low\n2,low\n3,usually\n4,high\n5,very high"
+                    }
+                }
+            ]
+        }
+    ],
+    "custom_relations": [
+        {
+            "relation_type": 2,
+            "parent_custom_table_name": "organization",
+            "child_custom_table_name": "user"
+        }
+    ],
+    "custom_forms": [
+        {
+			"suuid": "e6b833089cee9ad107e6",
+            "form_view_name": "Form",
+            "custom_form_blocks": [
+                {
+                    "form_block_view_name": null,
+                    "form_block_type": "default",
+                    "available": "1",
+                    "custom_form_columns": [
+                        {
+                            "suuid": "wzfXn9Bcg6EMBzQBgaw7",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "mail_key_name"
+                        },
+                        {
+                            "suuid": "3zSnP6M9jwPpiJeXA4Vt",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "mail_view_name"
+                        },
+                        {
+                            "suuid": "cekJbstSuBbJw5kdUyDT",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "mail_template_type"
+                        },
+                        {
+                            "suuid": "89Di5UGHKgCkBRb75ata",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "mail_from_view_name"
+                        },
+                        {
+                            "suuid": "gcfrb5hTpgZZ8J4cBTYy",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "mail_subject"
+                        },
+                        {
+                            "suuid": "HaWexXa9VM3fiN8uNbZm",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "mail_body"
+                        },
+                        {
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "attachments"
+                        },
+                        {
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "custom_attachments"
+                        }
+                    ],
+                    "form_block_target_table_name": "mail_template"
+                }
+            ],
+            "table_name": "mail_template"
+        }, 
+        {
+			"suuid": "c38977fc14800c624894",
+            "form_view_name": "Form",
+            "custom_form_blocks": [
+                {
+                    "form_block_view_name": null,
+                    "form_block_type": "default",
+                    "available": "1",
+                    "custom_form_columns": [
+                        {
+                            "suuid": "6Ls7rPspG9WUc4Yp6Z4f",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "mail_from"
+                        },
+                        {
+                            "suuid": "3d4RseS24y2U9X2cKiFU",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "mail_to"
+                        },
+                        {
+                            "suuid": "4eJzUJrccgYihD6QMGGw",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "mail_cc"
+                        },
+                        {
+                            "suuid": "SfEpEgRwsxfGFWHTcLgH",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "mail_bcc"
+                        },
+                        {
+                            "suuid": "PBJBSYEhyc84fVyyGF6z",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "mail_subject"
+                        },
+                        {
+                            "suuid": "BbLmiS67XYrHbGwBsWts",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "mail_body"
+                        },
+                        {
+                            "suuid": "aigX8zr6uB9RAjKuagQx",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "user"
+                        },
+                        {
+                            "suuid": "Ff3LRVLFxBmjMmFcbtAK",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "mail_template"
+                        },
+                        {
+                            "suuid": "XyrDziJdLw9rYcsURHjQ",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "send_datetime"
+                        }
+                    ],
+                    "form_block_target_table_name": "mail_send_log"
+                }
+            ],
+            "table_name": "mail_send_log"
+        },
+        {
+			"suuid": "cd614f0abb054f5f9adb",
+            "form_view_name": "Form",
+            "custom_form_blocks": [
+                {
+                    "form_block_view_name": null,
+                    "form_block_type": "default",
+                    "available": "1",
+                    "custom_form_columns": [
+                        {
+                            "suuid": "cAPSbRSdnebBBZBmXhQ7",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "company_name"
+                        },
+                        {
+                            "suuid": "jfbiCfVWFUcE2bi5aFCz",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "company_kana"
+                        },
+                        {
+                            "suuid": "MVhc6MmeDCTFVczKcYKy",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "zip01"
+                        },
+                        {
+                            "suuid": "VEpUHfuLtpi6Crau63Az",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "zip02"
+                        },
+                        {
+                            "suuid": "DCVVuxbHiVHzMEJwPwFJ",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "pref"
+                        },
+                        {
+                            "suuid": "B6fWnCFeVdmjUCQVtHAj",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "addr01"
+                        },
+                        {
+                            "suuid": "QpDMnMPn8DVzQyDjKdBW",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "addr02"
+                        },
+                        {
+                            "suuid": "K3BphQicAeDSBgspKFer",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "tel01"
+                        },
+                        {
+                            "suuid": "HsFZinakaQsSzsgfCag7",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "tel02"
+                        },
+                        {
+                            "suuid": "u6Qkt6JjpuCrTSegVKGL",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "tel03"
+                        },
+                        {
+                            "suuid": "5452hX8M9hakwGKUHFhF",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "company_logo"
+                        },
+                        {
+                            "suuid": "MdZdi7wf7CRLtx5w3YKS",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "company_stamp"
+                        }
+                    ],
+                    "form_block_target_table_name": "base_info"
+                }
+            ],
+            "table_name": "base_info"
+        },
+        {
+			"suuid": "eaaae44f42d1895e43b9",
+            "form_view_name": "Form",
+            "custom_form_blocks": [
+                {
+                    "form_block_view_name": null,
+                    "form_block_type": "default",
+                    "available": "1",
+                    "custom_form_columns": [
+                        {
+                            "suuid": "KnBgrn4UHTFfM9SiPnrp",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "parent_organization"
+                        },
+                        {
+                            "suuid": "xW6UjZdyxbZJkHkM6DgR",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "organization_code"
+                        },
+                        {
+                            "suuid": "8zaa5TaiNdhLFjfTLn4y",
+                            "form_column_type": "0",
+                            "options": null,
+                            "form_column_target_name": "organization_name"
+                        }
+                    ],
+                    "form_block_target_table_name": "organization"
+                },
+                {
+                    "form_block_view_name": "Child table-user",
+                    "form_block_type": "many_to_many",
+                    "available": "1",
+                    "custom_form_columns": [
+                    ],
+                    "form_block_target_table_name": "user"
+                }
+            ],
+            "table_name": "organization"
+        },
+        {
+			"suuid": "96c4e4f7d8a86a4ba17e",
+            "form_view_name": "Form",
+            "custom_form_blocks": [
+                {
+                    "form_block_view_name": null,
+                    "form_block_type": "default",
+                    "available": "1",
+                    "custom_form_columns": [
+                        {
+                            "suuid": "5Qjw7c3ssMEA5QYHeSTw",
+                            "form_column_type": "0",
+                            "options": [],
+                            "form_column_target_name": "title"
+                        },
+                        {
+                            "suuid": "jYBND2mAD4ryAfiwRmGu",
+                            "form_column_type": "0",
+                            "options": [],
+                            "form_column_target_name": "body"
+                        },
+                        {
+                            "suuid": "B6nw5WesJAGh5bjDpAE6",
+                            "form_column_type": "0",
+                            "options": [],
+                            "form_column_target_name": "priority"
+                        },
+                        {
+                            "suuid": "dG2uRxGDpkHayUnWMAU8",
+                            "form_column_type": "0",
+                            "options": [],
+                            "form_column_target_name": "view_flg"
+                        },
+                        {
+                            "suuid": "VNj8GUNjAXNKgTW7CYPJ",
+                            "form_column_type": "0",
+                            "options": [],
+                            "form_column_target_name": "order"
+                        }
+                    ],
+                    "form_block_target_table_name": "information"
+                }
+            ],
+            "table_name": "information"
+        }
+    ],
+	"custom_views": [
+		{
+			"suuid": "s6j3csfuc4kagb82zna3",
+			"view_view_name": "Default view",
+			"view_kind_type": 9,
+			"custom_view_columns": [
+				{
+					"order": "1",
+					"view_column_target_name": "mail_key_name",
+					"view_column_type": 0
+				},
+				{
+					"order": "2",
+					"view_column_target_name": "mail_view_name",
+					"view_column_type": 0
+				},
+				{
+					"order": "3",
+					"view_column_target_name": "mail_template_type",
+					"view_column_type": 0
+				}
+			],
+			"custom_view_filters": [],
+			"table_name": "mail_template"
+		},
+		{
+			"suuid": "s6j3csauc4kagb82zna3",
+			"view_view_name": "Default view",
+			"view_kind_type": 9,
+			"custom_view_columns": [
+				{
+					"order": "1",
+					"view_column_target_name": "mail_template",
+					"view_column_type": 0
+				},
+                {
+					"order": "2",
+					"view_column_target_name": "mail_to",
+					"view_column_type": 0
+				},
+				{
+					"order": "3",
+					"view_column_target_name": "user",
+					"view_column_type": 0
+				},
+				{
+					"order": "4",
+					"view_column_target_name": "send_datetime",
+					"view_column_type": 0
+				}
+			],
+			"custom_view_filters": [],
+			"table_name": "mail_send_log"
+		},
+        {
+			"suuid": "3471e23fbff8dc65437b",
+			"view_view_name": "Default view",
+			"view_kind_type": 9,
+			"custom_view_columns": [
+				{
+					"order": "1",
+					"view_column_target_name": "id",
+					"view_column_type": 1
+				},
+				{
+					"order": "2",
+					"view_column_target_name": "user_code",
+					"view_column_type": 0
+				},
+				{
+					"order": "3",
+					"view_column_target_name": "user_name",
+					"view_column_type": 0
+				},
+				{
+					"order": "4",
+					"view_column_target_name": "email",
+					"view_column_type": 0
+				},
+				{
+					"order": "96",
+					"view_column_target_name": "created_at",
+					"view_column_type": 1
+				},
+				{
+					"order": "97",
+					"view_column_target_name": "updated_at",
+					"view_column_type": 1
+				}
+			],
+			"custom_view_filters": [],
+			"table_name": "user"
+		},
+		{
+			"suuid": "24e34126c023857a092e",
+			"view_view_name": "Default view",
+			"view_kind_type": 9,
+			"custom_view_columns": [
+				{
+					"order": "1",
+					"view_column_target_name": "id",
+					"view_column_type": 1
+				},
+				{
+					"order": "2",
+					"view_column_target_name": "parent_organization",
+					"view_column_type": 0
+				},
+				{
+					"order": "3",
+					"view_column_target_name": "organization_code",
+					"view_column_type": 0
+				},
+				{
+					"order": "4",
+					"view_column_target_name": "organization_name",
+					"view_column_type": 0
+				},
+				{
+					"order": "96",
+					"view_column_target_name": "created_at",
+					"view_column_type": 1
+				},
+				{
+					"order": "97",
+					"view_column_target_name": "updated_at",
+					"view_column_type": 1
+				}
+			],
+			"custom_view_filters": [],
+			"table_name": "organization"
+		},
+        {
+            "suuid": "b6d5afcda4ce26091f36",
+            "view_view_name": "Default view",
+			"view_kind_type": 9,
+            "custom_view_columns": [
+                {
+                    "view_column_type": "0",
+                    "order": "1",
+                    "view_column_target_name": "title"
+                },
+                {
+                    "view_column_type": "0",
+                    "order": "2",
+                    "view_column_target_name": "view_flg"
+                },
+                {
+                    "view_column_type": "0",
+                    "order": "3",
+                    "view_column_target_name": "priority"
+                },
+                {
+                    "view_column_type": "1",
+                    "order": "96",
+                    "view_column_target_name": "created_at"
+                },
+                {
+                    "view_column_type": "1",
+                    "order": "97",
+                    "view_column_target_name": "updated_at"
+                }
+            ],
+            "custom_view_filters": [],
+            "custom_view_sorts": [
+                {
+                    "view_column_type": "0",
+                    "sort": "-1",
+                    "priority": "1",
+                    "view_column_target_name": "order"
+                },
+                {
+                    "view_column_type": "1",
+                    "sort": "-1",
+                    "priority": "2",
+                    "view_column_target_name": "updated_at"
+                },
+                {
+                    "view_column_type": "1",
+                    "sort": "-1",
+                    "priority": "3",
+                    "view_column_target_name": "id"
+                }
+            ],
+            "table_name": "information"
+        },
+        {
+            "suuid": "99120fd4b360e15993d2",
+            "view_view_name": "Infomation list",
+			"view_kind_type": 0,
+            "custom_view_columns": [
+                {
+                    "view_column_type": "0",
+                    "order": "1",
+                    "view_column_target_name": "title"
+                },
+                {
+                    "view_column_type": "0",
+                    "order": "2",
+                    "view_column_target_name": "priority"
+                },
+                {
+                    "view_column_type": "1",
+                    "order": "3",
+                    "view_column_target_name": "updated_at"
+                }
+            ],
+            "custom_view_filters": [
+                {
+                    "view_column_type": "0",
+                    "view_column_target_name": "view_flg",
+                    "view_filter_condition": "1",
+                    "view_filter_condition_value_text": "1"
+                }
+            ],
+            "custom_view_sorts": [
+                {
+                    "view_column_type": "0",
+                    "sort": "-1",
+                    "priority": "1",
+                    "view_column_target_name": "order"
+                },
+                {
+                    "view_column_type": "1",
+                    "sort": "-1",
+                    "priority": "2",
+                    "view_column_target_name": "updated_at"
+                },
+                {
+                    "view_column_type": "1",
+                    "sort": "-1",
+                    "priority": "3",
+                    "view_column_target_name": "id"
+                }
+            ],
+            "table_name": "information"
+        }
+	],
+    "dashboards": [
+		{
+			"dashboard_type": "0",
+			"dashboard_name": "system_default_dashboard",
+			"dashboard_view_name": "Default dashboard",
+			"options": {
+                "row1" : "1",
+                "row2" : "2"
+            },
+			"dashboard_boxes": [
+                {
+                    "row_no": "1",
+                    "column_no": "1",
+                    "dashboard_box_view_name": "Infomation list",
+                    "dashboard_box_type": "list",
+                    "options": {
+                        "target_table_name": "information",
+                        "target_view_suuid": "99120fd4b360e15993d2"
+                    }
+                },
+				{
+					"row_no": "2",
+					"column_no": "1",
+					"dashboard_box_view_name": "Guidelines",
+					"dashboard_box_type": "system",
+					"options": {
+						"target_system_name": "guideline"
+					}
+				},
+				{
+					"row_no": "2",
+					"column_no": "2",
+					"dashboard_box_view_name": "Exment Newslist",
+					"dashboard_box_type": "system",
+					"options": {
+						"target_system_name": "news"
+					}
+				}
+			]
+		}
+	],
+    "role_groups": [
+        {
+            "role_group_name": "data_admin_group",
+            "role_group_view_name": "All data manager Group",
+            "description": "Role group that allows to edit and view all data.",
+            "role_group_permissions": [
+                {
+                    "role_group_permission_type": "0",
+                    "role_group_target_name": "0",
+                    "permissions": [
+                        "custom_value_edit_all"
+                    ]
+                }
+            ]
+        },
+        {
+            "role_group_name": "user_organization_admin_group",
+            "role_group_view_name": "User and Organization manage Group",
+            "description": "Role group that managements users and organizations",
+            "role_group_permissions": [
+                {
+                    "role_group_permission_type": "0",
+                    "role_group_target_name": "0",
+                    "permissions": [
+                        "login_user"
+                    ]
+                },
+                {
+                    "role_group_permission_type": "1",
+                    "role_group_target_name": "user",
+                    "permissions": [
+                        "custom_value_edit_all",
+                        "custom_value_import",
+                        "custom_value_export"
+                    ]
+                },
+                {
+                    "role_group_permission_type": "1",
+                    "role_group_target_name": "organization",
+                    "permissions": [
+                        "custom_value_edit_all",
+                        "custom_value_import",
+                        "custom_value_export"
+                    ]
+                },
+                {
+                    "role_group_permission_type": "0",
+                    "role_group_target_name": "1",
+                    "permissions": [
+                        "role_group_user_organization"
+                    ]
+                }
+            ]
+        },
+        {
+            "role_group_name": "information_manage_group",
+            "role_group_view_name": "Information manage Group",
+            "description": "Role group that manage information.",
+            "role_group_permissions": [
+                {
+                    "role_group_permission_type": "1",
+                    "role_group_target_name": "information",
+                    "permissions": [
+                        "custom_value_edit_all",
+                        "custom_value_import",
+                        "custom_value_export"
+                    ]
+                }
+            ]
+        },
+        {
+            "role_group_name": "user_group",
+            "role_group_view_name": "User Group",
+            "description": "Role group that default user group.",
+            "role_group_permissions": [
+            ]
+        }
+    ],
+    "admin_menu": [
+        {
+            "order": "1",
+            "menu_type": "system",
+            "menu_name": "home",
+            "title": "HOME",
+            "parent_name": null,
+            "menu_target_name": "home"
+        },
+        {
+            "order": "2",
+            "icon": "fa-database",
+            "uri": null,
+            "menu_type": "parent_node",
+            "menu_name": "master",
+            "title": "Manage Master",
+            "parent_name": null,
+            "menu_target_name": null
+        },
+        {
+            "order": "1",
+            "menu_type": "table",
+            "menu_name": "base_info",
+            "title": "Base Info",
+            "parent_name": "master",
+            "menu_target_name": "base_info"
+        },
+        {
+            "order": "2",
+            "menu_type": "table",
+            "menu_name": "organization",
+            "title": "Organization",
+            "parent_name": "master",
+            "menu_target_name": "organization"
+        },
+        {
+            "order": "3",
+            "menu_type": "table",
+            "menu_name": "user",
+            "title": "User",
+            "parent_name": "master",
+            "menu_target_name": "user"
+        },
+        {
+            "order": "4",
+            "menu_type": "table",
+            "menu_name": "information",
+            "title": "Information",
+            "parent_name": "master",
+            "menu_target_name": "information"
+        },
+        {
+            "order": "91",
+            "menu_type": "parent_node",
+            "menu_name": "admin",
+            "parent_name": null,
+            "title": "Admin Setting",
+            "menu_target_name": "admin",
+            "icon": "fa-user-circle-o" 
+        },
+        {
+            "order": "1",
+            "menu_type": "system",
+            "menu_name": "system",
+            "title": "System Setting",
+            "parent_name": "admin",
+            "menu_target_name": "system"
+        },
+        {
+            "order": "2",
+            "menu_type": "system",
+            "menu_name": "custom_table",
+            "title": "Custom Table",
+            "parent_name": "admin",
+            "menu_target_name": "custom_table"
+        },
+        {
+            "order": "3",
+            "menu_type": "system",
+            "menu_name": "menu",
+            "title": "Menu",
+            "parent_name": "admin",
+            "menu_target_name": "menu"
+        },
+        {
+            "order": "4",
+            "menu_type": "system",
+            "menu_name": "template",
+            "title": "Template",
+            "parent_name": "admin",
+            "menu_target_name": "template"
+        },
+        {
+            "order": "5",
+            "menu_type": "system",
+            "menu_name": "backup",
+            "title": "Backup",
+            "parent_name": "admin",
+            "menu_target_name": "backup"
+        },
+        {
+            "order": "6",
+            "menu_type": "system",
+            "menu_name": "loginuser",
+            "title": "LoginUser",
+            "parent_name": "admin",
+            "menu_target_name": "loginuser"
+        },
+        {
+            "order": "7",
+            "menu_type": "system",
+            "menu_name": "role_group",
+            "title": "Role Group",
+            "parent_name": "admin",
+            "menu_target_name": "role_group"
+        },
+        {
+            "order": "8",
+            "menu_type": "system",
+            "menu_name": "workflow",
+            "title": "Workflow",
+            "parent_name": "admin",
+            "menu_target_name": "workflow"
+        },
+        {
+            "order": "9",
+            "menu_type": "system",
+            "menu_name": "plugin",
+            "title": "Plugin",
+            "parent_name": "admin",
+            "menu_target_name": "plugin"
+        },
+        {
+            "order": "11",
+            "menu_type": "table",
+            "menu_name": "mail_template",
+            "title": "Mail Template",
+            "parent_name": "admin",
+            "menu_target_name": "mail_template"
+        }
+    ],
+    "thumbnail": "thumbnail.png"
+}

@@ -1,0 +1,523 @@
+{
+    "template_view_name": "システムテンプレート",
+    "description": "システム向けのテンプレートです。必ずインストールする必要があります。",
+    "custom_tables": [
+        {
+            "table_name": "document",
+            "table_view_name": "ドキュメント",
+            "custom_columns": [
+                {
+                    "column_name": "document_name",
+                    "column_view_name": "ドキュメント名"
+                },
+                {
+                    "column_name": "file_uuid",
+                    "column_view_name": "ファイルUUID"
+                }
+            ]
+        },
+        {
+            "table_name": "comment",
+            "table_view_name": "コメント",
+            "custom_columns": [
+                {
+                    "column_name": "comment_detail",
+                    "column_view_name": "コメント詳細"
+                }
+            ]
+        },
+        {
+            "table_name": "base_info",
+            "table_view_name": "基本情報",
+            "custom_columns": [
+                {
+                    "column_name": "company_name",
+                    "column_view_name": "会社名"
+                },
+                {
+                    "column_name": "company_kana",
+                    "column_view_name": "会社カナ"
+                },
+                {
+                    "column_name": "zip01",
+                    "column_view_name": "郵便番号1"
+                },
+                {
+                    "column_name": "zip02",
+                    "column_view_name": "郵便番号2"
+                },
+                {
+                    "column_name": "tel01",
+                    "column_view_name": "電話番号1",
+                    "options": {
+                        "placeholder": "例：03"
+                    }
+                },
+                {
+                    "column_name": "tel02",
+                    "column_view_name": "電話番号2",
+                    "options": {
+                        "placeholder": "例：1234"
+                    }
+                },
+                {
+                    "column_name": "tel03",
+                    "column_view_name": "電話番号3",
+                    "options": {
+                        "placeholder": "例：5678"
+                    }
+                },
+                {
+                    "column_name": "fax01",
+                    "column_view_name": "FAX1",
+                    "options": {
+                        "placeholder": "例：03"
+                    }
+                },
+                {
+                    "column_name": "fax02",
+                    "column_view_name": "FAX2",
+                    "options": {
+                        "placeholder": "例：1234"
+                    }
+                },
+                {
+                    "column_name": "fax03",
+                    "column_view_name": "FAX3",
+                    "options": {
+                        "placeholder": "例：5678"
+                    }
+                },
+                {
+                    "column_name": "pref",
+                    "column_view_name": "都道府県",
+                    "options": {
+                        "select_item_valtext": "01,北海道\n02,青森県\n03,岩手県\n04,宮城県\n05,秋田県\n06,山形県\n07,福島県\n08,茨城県\n09,栃木県\n10,群馬県\n11,埼玉県\n12,千葉県\n13,東京都\n14,神奈川県\n15,新潟県\n16,富山県\n17,石川県\n18,福井県\n19,山梨県\n20,長野県\n21,岐阜県\n22,静岡県\n23,愛知県\n24,三重県\n25,滋賀県\n26,京都府\n27,大阪府\n28,兵庫県\n29,奈良県\n30,和歌山県\n31,鳥取県\n32,島根県\n33,岡山県\n34,広島県\n35,山口県\n36,徳島県\n37,香川県\n38,愛媛県\n39,高知県\n40,福岡県\n41,佐賀県\n42,長崎県\n43,熊本県\n44,大分県\n45,宮崎県\n46,鹿児島県\n47,沖縄県"
+                    }
+                },
+                {
+                    "column_name": "addr01",
+                    "column_view_name": "住所"
+                },
+                {
+                    "column_name": "addr02",
+                    "column_view_name": "住所(ビル以降)"
+                },
+                {
+                    "column_name": "company_logo",
+                    "column_view_name": "会社ロゴ",
+                    "options": {
+                        "help": "最適な画像サイズは200×70です。"
+                    }
+                },
+                {
+                    "column_name": "company_stamp",
+                    "column_view_name": "会社印",
+                    "options": {
+                        "help": "最適な画像サイズは200×200です。"
+                    }
+                },
+                {
+                    "column_name": "transfer_bank_name",
+                    "column_view_name": "代表振込先口座-銀行名"
+                },
+                {
+                    "column_name": "transfer_bank_office_name",
+                    "column_view_name": "代表振込先口座-支店名"
+                },
+                {
+                    "column_name": "transfer_bank_office_no",
+                    "column_view_name": "代表振込先口座-支店番号"
+                },
+                {
+                    "column_name": "transfer_bank_account_type",
+                    "column_view_name": "代表振込先口座-口座種類",
+                    "options": {
+                        "help": "「普通」「当座」など、口座の種類をご記入ください。"
+                    }
+                },
+                {
+                    "column_name": "transfer_bank_account_name",
+                    "column_view_name": "代表振込先口座-口座名"
+                },
+                {
+                    "column_name": "transfer_bank_account_no",
+                    "column_view_name": "代表振込先口座-口座番号"
+                },
+                {
+                    "column_name": "transfer_bank_account_name",
+                    "column_view_name": "代表振込先口座-口座名"
+                }
+            ]
+        },
+        {
+            "table_name": "user",
+            "table_view_name": "ユーザー",
+            "custom_columns": [
+                {
+                    "column_name": "user_code",
+                    "column_view_name": "ユーザーコード"
+                },
+                {
+                    "column_name": "user_name",
+                    "column_view_name": "ユーザー名"
+                },
+                {
+                    "column_name": "email",
+                    "column_view_name": "メールアドレス"
+                }
+            ]
+        },
+        {
+            "table_name": "organization",
+            "table_view_name": "組織",
+            "custom_columns": [
+                {
+                    "column_name": "organization_code",
+                    "column_view_name": "組織コード"
+                },
+                {
+                    "column_name": "organization_name",
+                    "column_view_name": "組織名"
+                },
+                {
+                    "column_name": "parent_organization",
+                    "column_view_name": "親組織"
+                }
+            ]
+        },
+        {
+            "table_name": "mail_template",
+            "table_view_name": "通知テンプレート",
+            "description": "通知送信時のメッセージの本文などを管理します。",
+            "custom_columns": [
+                {
+                    "column_name": "mail_key_name",
+                    "column_view_name": "通知キー名",
+                    "options": {
+                        "help": "システム上で、通知テンプレートを一意に判別するためのキー名です。"
+                    }
+                },
+                {
+                    "column_name": "mail_view_name",
+                    "column_view_name": "通知表示名",
+                    "options": {
+                        "help": "一覧画面で表示する、テンプレート名称です。"
+                    }
+                },
+                {
+                    "column_name": "mail_template_type",
+                    "column_view_name": "テンプレート種類",
+                    "options": {
+                        "select_item_valtext": "header,ヘッダー\nbody,本文\nfooter,フッター"
+                    }
+                },
+                {
+                    "column_name": "mail_subject",
+                    "column_view_name": "通知件名",
+                    "options": {
+                        "help": "送付する通知の件名を入力します。変数を利用できます。"
+                    }
+                },
+                {
+                    "column_name": "mail_body",
+                    "column_view_name": "通知本文",
+                    "options": {
+                        "help": "送付する通知の本文を入力します。変数を利用できます。"
+                    }
+                },
+                {
+                    "column_name": "mail_from_view_name",
+                    "column_view_name": "メール送信元-表示名",
+                    "options": {
+                        "help": "メール送信元の表示名を入力してください。受信者に表示されます。変数を利用できます。"
+                    }
+                },
+                {
+                    "column_name": "attachments",
+                    "column_view_name": "添付ファイル",
+                    "options": {
+                        "help": "メールに添付するファイルを選択してください。"
+                    }
+                },
+                {
+                    "column_name": "custom_attachments",
+                    "column_view_name": "カスタム添付ファイル",
+                    "options": {
+                        "help": "通知対象となったデータのカスタム列(ファイル、画像)や添付ファイルをメールに追加することができます。<br />例：カスタム列の場合: ${file:カスタム列名}、添付ファイルの場合: ${documents}"
+                    }
+                }
+            ]
+        },
+        {
+            "table_name": "mail_send_log",
+            "table_view_name": "メール送信履歴",
+            "description": "メール送信履歴を管理します。",
+            "custom_columns": [
+                {
+                    "column_name": "mail_from",
+                    "column_view_name": "メール送信元"
+                },
+                {
+                    "column_name": "mail_to",
+                    "column_view_name": "メール送信先"
+                },
+                {
+                    "column_name": "mail_cc",
+                    "column_view_name": "メール送信先(CC)"
+                },
+                {
+                    "column_name": "mail_bcc",
+                    "column_view_name": "メール送信先(BCC)"
+                },
+                {
+                    "column_name": "mail_subject",
+                    "column_view_name": "件名"
+                },
+                {
+                    "column_name": "mail_body",
+                    "column_view_name": "本文"
+                },
+                {
+                    "column_name": "user",
+                    "column_view_name": "送信対象ユーザー"
+                },
+                {
+                    "column_name": "mail_template",
+                    "column_view_name": "送信通知テンプレート"
+                },
+                {
+                    "column_name": "send_datetime",
+                    "column_view_name": "送信日時"
+                }
+            ]
+        },
+        {
+            "table_name": "information",
+            "table_view_name": "お知らせ",
+            "description": "ユーザーに通知するお知らせです。ダッシュボードなどに表示することができます。",
+            "custom_columns": [
+                {
+                    "column_name": "title",
+                    "column_view_name": "タイトル"
+                },
+                {
+                    "column_name": "body",
+                    "column_view_name": "本文"
+                },
+                {
+                    "column_name": "view_flg",
+                    "column_view_name": "表示フラグ",
+                    "options": {
+                        "help": "一覧表示したい場合、YESに設定してください。"
+                    }
+                },
+                {
+                    "column_name": "order",
+                    "column_view_name": "表示順",
+                    "options": {
+                        "help": "数値が大きい順に、一覧に表示します。（同じ値の場合は更新日時が新しい順）"
+                    }
+                },
+                {
+                    "column_name": "priority",
+                    "column_view_name": "重要度",
+                    "options": {
+                        "select_item_valtext": "1,非常に低い\r\n2,低い\r\n3,通常\r\n4,高い\r\n5,非常に高い"
+                    }
+                }
+            ]
+        }
+    ],
+    "custom_forms": [
+        {
+			"suuid": "e6b833089cee9ad107e6",
+            "form_view_name": "フォーム"
+        }, 
+        {
+			"suuid": "c38977fc14800c624894",
+            "form_view_name": "フォーム"
+        },
+        {
+			"suuid": "cd614f0abb054f5f9adb",
+            "form_view_name": "フォーム"
+        },
+        {
+			"suuid": "eaaae44f42d1895e43b9",
+            "form_view_name": "フォーム",
+            "custom_form_blocks": [
+                {
+                    "form_block_view_name": "子テーブル - ユーザー",
+                    "form_block_target_table_name": "user"
+                }
+            ]
+        },
+        {
+			"suuid": "96c4e4f7d8a86a4ba17e",
+            "form_view_name": "フォーム"
+        }
+    ],
+	"custom_views": [
+		{
+			"suuid": "s6j3csfuc4kagb82zna3",
+			"view_view_name": "全件ビュー"
+		},
+		{
+			"suuid": "s6j3csauc4kagb82zna3",
+			"view_view_name": "全件ビュー"
+		},
+        {
+			"suuid": "3471e23fbff8dc65437b",
+			"view_view_name": "全件ビュー"
+		},
+		{
+			"suuid": "24e34126c023857a092e",
+			"view_view_name": "全件ビュー"
+		},
+        {
+            "suuid": "b6d5afcda4ce26091f36",
+            "view_view_name": "全件ビュー"
+        },
+        {
+            "suuid": "99120fd4b360e15993d2",
+            "view_view_name": "お知らせ一覧"
+        }
+	],
+    "dashboards": [
+		{
+			"dashboard_name": "system_default_dashboard",
+			"dashboard_view_name": "既定のダッシュボード",
+			"dashboard_boxes": [
+                {
+                    "row_no": "1",
+                    "column_no": "1",
+                    "dashboard_box_view_name": "お知らせ一覧"
+                },
+				{
+					"row_no": "2",
+					"column_no": "1",
+					"dashboard_box_view_name": "ガイドライン"
+				},
+				{
+					"row_no": "2",
+					"column_no": "2",
+					"dashboard_box_view_name": "Exment新着情報一覧"
+				}
+			]
+		}
+	],
+    "role_groups": [
+        {
+            "role_group_name": "data_admin_group",
+            "role_group_view_name": "全データ管理者グループ",
+            "description": "すべてのテーブルのデータを編集・閲覧可能な役割グループです。"
+        },
+        {
+            "role_group_name": "user_organization_admin_group",
+            "role_group_view_name": "ユーザー・組織管理グループ",
+            "description": "ユーザー・組織情報を管理する役割グループです。"
+        },
+        {
+            "role_group_name": "information_manage_group",
+            "role_group_view_name": "お知らせ情報管理グループ",
+            "description": "お知らせ情報テーブルの管理を行う役割グループです。"
+        },
+        {
+            "role_group_name": "user_group",
+            "role_group_view_name": "一般グループ",
+            "description": "一般ユーザーの役割グループです。"
+        }
+    ],
+    "admin_menu": [
+        {
+            "menu_type": "system",
+            "menu_name": "home",
+            "title": "HOME"
+        },
+        {
+            "menu_type": "parent_node",
+            "menu_name": "master",
+            "title": "マスター管理"
+        },
+        {
+            "menu_type": "table",
+            "menu_name": "base_info",
+            "title": "基本情報"
+        },
+        {
+            "menu_type": "table",
+            "menu_name": "organization",
+            "title": "組織"
+        },
+        {
+            "menu_type": "table",
+            "menu_name": "user",
+            "title": "ユーザー"
+        },
+        {
+            "menu_type": "table",
+            "menu_name": "information",
+            "title": "お知らせ"
+        },
+        {
+            "menu_type": "parent_node",
+            "menu_name": "admin",
+            "title": "管理者設定"
+        },
+        {
+            "menu_type": "system",
+            "menu_name": "system",
+            "title": "システム設定"
+        },
+        {
+            "menu_type": "system",
+            "menu_name": "custom_table",
+            "title": "カスタムテーブル"
+        },
+        {
+            "menu_type": "system",
+            "menu_name": "menu",
+            "title": "メニュー"
+        },
+        {
+            "menu_type": "system",
+            "menu_name": "template",
+            "title": "テンプレート"
+        },
+        {
+            "menu_type": "system",
+            "menu_name": "backup",
+            "title": "バックアップ"
+        },
+        {
+            "menu_type": "system",
+            "menu_name": "loginuser",
+            "title": "ログインユーザー"
+        },
+        {
+            "menu_type": "system",
+            "menu_name": "role_group",
+            "title": "役割グループ"
+        },
+        {
+            "menu_type": "system",
+            "menu_name": "workflow",
+            "title": "ワークフロー"
+        },
+        {
+            "menu_type": "system",
+            "menu_name": "plugin",
+            "title": "プラグイン"
+        },
+        {
+            "menu_type": "table",
+            "menu_name": "mail_template",
+            "title": "通知テンプレート"
+        },
+        {
+            "menu_type": "table",
+            "menu_name": "mail_send_log",
+            "title": "メール送信履歴"
+        }
+    ]
+}
